@@ -1,0 +1,8 @@
+{
+  "accentColor": "#0652ff",
+  "theme": "moonstone",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "IBM Plex Mono Text",
+  "interfaceFontFamily": "Inter",
+  "nativeMenus": false
+}
