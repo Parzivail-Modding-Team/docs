@@ -59,7 +59,7 @@ PswgContent.registerBlasterPreset(
 		// In the overheat minigame, the "primary" (blue) sector is halfway across
 		// the bar and is 10% of the bar's width wide. The "secondary" (gold) is 30% of the way across and is 6% of the bar's width wide.
 	    .cooling(new BlasterCoolingBypassProfile(0.5f, 0.05f, 0.3f, 0.03f))
-		// This blaster has the following attachments:
+		// This blaster supports the following attachments:
 	    .attachments(
 	        new BlasterAttachmentBuilder()
 				// A long barrel attachment that reduces spread, on layer 1. On the model, the visual part is called long_barrel, and it uses the base texture.
@@ -70,9 +70,9 @@ PswgContent.registerBlasterPreset(
 	            .attachment(2, "scope", BlasterAttachmentFunction.DEFAULT_SCOPE, BlasterAttachmentCategory.SCOPE, "scope", null)
 				// And a repeater on layer 3. It does not have a visual model component.
 	            .attachment(3, "repeater", BlasterAttachmentFunction.ALLOW_AUTO, BlasterAttachmentCategory.INTERNAL_ORDNANCE_CONFIG)
-				// We'll layer 1 require an attachment, and by default the blaster
-				// will have the long barrel selected on layer 1
-	            .required(1, "long_barrel")
+				// We'll layer 1 require at least one attachment to be selected, 
+				// and by default the blaster will choose the long barrel
+	            .requireLayer(1, "long_barrel")
 	            .build()
 	
 	    )
