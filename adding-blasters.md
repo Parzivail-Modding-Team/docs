@@ -17,7 +17,7 @@ When speaking about blasters, it's relevant to incorporate both common Minecraft
 | Tick | The interval at which the game updates. Ideally 1/20th of a second. |
 | Cooling | The period during which the blaster is losing heat instead of accumulating it |
 | Venting | The period during which the blaster is cooling down and cannot be fired |
-| Overheating | The condition when a blaster is fired without manually venting heat for long enough that the heat accumulated is greater thean the heat capacity, and the player is forced to wait for the blaster to completely cool before firing again |
+| Overheating | The condition when a blaster is fired without manually venting heat for long enough that the heat accumulated is greater than the heat capacity, and the player is forced to wait for the blaster to completely cool before firing again |
 | Overcharge | A grace period during which the blaster can be fired without accumulating heat |
 | Cooling bypass | A way to end an overheat vent early by completing a timing-based minigame on the blaster cooldown bar |
 | Primary bypass | The first, typically wider, cooling bypass target |
