@@ -14,13 +14,6 @@ Method: `PswgContent::registerBlasterPreset(...)`
 
 This method takes one or more `BlasterDescriptor` instances which describe all of the properties of a blaster to be registered.
 
-### OBSOLETE
-
-Parameter | Type | Description 
---- | --- | ---
-`damage` | `float` | The maximum amount of half-hearts a single blaster bolt can deal to a target. The actual damage value may be lower than this, as described in `damageFalloff`.
-`damageFalloff` | `Function<Double, Double>` | A function that takes in a value $x$ as a fraction $0\lt x\lt 1$ that corresponds to the percentage of `range` the target is away (i.e. $\frac{d_{target}}{range}$) and returns the percentage of the maximum damage as a fraction $0\le x \le 1$ that should be dealt to a target at that range.
-
 ### `BlasterDescriptor` Builder
 
 `BlasterDescriptor` follows the builder pattern, which allows blasters data to be easily composed to only modify the values required to describe your blaster.
