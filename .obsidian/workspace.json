@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "setup.md",
+                "file": "content-api.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "setup.md",
+                "file": "content-api.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "setup.md"
+                "file": "content-api.md"
               }
             }
           }
@@ -167,10 +166,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eb8cdcf44d093ee3",
+  "active": "fda0705ece6cd209",
   "lastOpenFiles": [
-    "content-api.md",
     "setup.md",
+    "content-api.md",
     "image 1.png",
     "image.png",
     "Pasted image 20230419182643.png",

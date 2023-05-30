@@ -14,17 +14,62 @@ Method: `PswgContent::registerBlasterPreset(...)`
 
 This method takes one or more `BlasterDescriptor` instances which describe all of the properties of a blaster to be registered.
 
-### `BlasterDescriptor` Parameters
+### OBSOLETE
+
+Parameter | Type | Description 
+--- | --- | ---
+`damage` | `float` | The maximum amount of half-hearts a single blaster bolt can deal to a target. The actual damage value may be lower than this, as described in `damageFalloff`.
+`damageFalloff` | `Function<Double, Double>` | A function that takes in a value $x$ as a fraction $0\lt x\lt 1$ that corresponds to the percentage of `range` the target is away (i.e. $\frac{d_{target}}{range}$) and returns the percentage of the maximum damage as a fraction $0\le x \le 1$ that should be dealt to a target at that range.
+
+### `BlasterDescriptor` Builder
+
+`BlasterDescriptor` follows the builder pattern, which allows blasters data to be easily composed to only modify the values required to describe your blaster.
+
+### Constructor
+
+#### Signature
+
+```java
+public BlasterDescriptor(Identifier id, BlasterArchetype type)
+```
+
+#### Parameters
 
 Parameter | Type | Description 
 --- | --- | ---
 `id` | `Identifier` | The unique ID that this blaster will be referenced with throughout PSWG, and as a part of the item name
-`sound` | `Identifier` | The ID of the sound that plays each time the blaster is fired
 `type` | `BlasterArchetype` | The broad category that best describes the blaster. The value is used internally to determine how many hands are required to hold the blaster, etc.
+
+### Builder method: sound
+
+#### Signature
+
+```java
+public BlasterDescriptor sound(Identifier sound)
+```
+
+#### Parameters
+
+Parameter | Type | Description 
+--- | --- | ---
+`sound` | `Identifier` | The ID of the sound that plays each time the blaster is fired
+
+### Builder method: firingBehavior
+
+#### Signature
+
+```java
+public BlasterDescriptor firingBehavior(List<BlasterFiringMode> firingModes, BlasterWaterBehavior waterBehavior)
+```
+
+#### Parameters
+
+Parameter | Type | Description 
+--- | --- | ---
 `firingModes` | `List<BlasterFiringMode>` | A list of firing modes that the player can switch this blaster into. The order provided here is the order the player will cycle through them.
 `waterBehavior` | `BlasterWaterBehavior` | Determines how the blaster will behave when fired at or while submerged in water.
-`damage` | `float` | The maximum amount of half-hearts a single blaster bolt can deal to a target. The actual damage value may be lower than this, as described in `damageFalloff`.
-`damageFalloff` | `Function<Double, Double>` | A function that takes in a value $x$ as a fraction $0\lt x\lt 1$ that corresponds to the percentage of `range` the target is away (i.e. $\frac{d_{target}}{range}$) and returns the percentage of the maximum damage as a fraction $0\le x \le 1$ that should be dealt to a target at that range.
+
+## Complete Example
 
 ```java
 PswgContent.registerBlasterPreset(
@@ -61,7 +106,7 @@ PswgContent.registerBlasterPreset(
 	    .cooling(new BlasterCoolingBypassProfile(0.5f, 0.05f, 0.3f, 0.03f))
 		// This blaster supports the following attachments:
 	    .attachments(
-	        new BlasterAttachmentBuilder()
+	        b -> b
 				// A long barrel attachment that reduces spread, on layer 1. On the model, the visual part is called long_barrel, and it uses the base texture.
 	            .attachment(1, "long_barrel", BlasterAttachmentFunction.REDUCE_SPREAD, BlasterAttachmentCategory.BARREL, "long_barrel", null)
 				// A short barrel that increases damage, also on layer 1. On the model, the visual part is called short_barrel, and it uses the base texture.
@@ -79,8 +124,10 @@ PswgContent.registerBlasterPreset(
 );
 ```
 
-## Modification
+## Modifying other blaster assets
 
 Event: `PswgContent.BLASTER_REGISTERED`
+Registration Phase: `PswgAddon::onPswgStarting`
+Firing Phase: `PswgAddon::onPswgReady`
 
 TODO

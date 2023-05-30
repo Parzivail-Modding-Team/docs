@@ -72,7 +72,7 @@
 <details>
 <summary>Q&A: Why can't I use the value from the Gradle properties file?</summary>
 
-At runtime, if you're not building and running with Gradle (Building and running with IntelliJ is recommended), these values in the Fabric Mod JSON are not populated with the values present in `gradle.properties`, and the version at runtime would be the literal string `${pswg_version}` instead of interpolating with the correct value, e.g. `0.0.108+1.20.0`. Hopefully future developments will prevent this redundancy, but unfortunately, specifying the version number in both locations is best practice for now.
+At runtime, if you're not building and running with Gradle (building and running with IntelliJ is recommended), these values in the Fabric Mod JSON are not populated with the values present in `gradle.properties`, and the version at runtime would be the literal string `${pswg_version}` instead of interpolating with the correct value, e.g. `0.0.108+1.20.0`. Hopefully future developments will prevent this redundancy, but unfortunately, specifying the version number in both locations is best practice for now.
 
 </details>
 
