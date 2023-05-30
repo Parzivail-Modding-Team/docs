@@ -27,7 +27,7 @@ When speaking about blasters, it's relevant to incorporate both common Minecraft
 
 ### Location
 
-The mod searches for blaster models in the `assets/<modid>/models/item/blaster` directory of a your addon. The name of the model should be the same as the ID used when registering your blaster. Textures for each model should share the same filename in the directory `assets/<modid>/textures/item/model/blaster` (unless specified otherwise, see the attachment section of the [Blaster Descriptor API](blaster-descriptor.md) page for more details).
+The mod searches for blaster models in the `assets/<modid>/models/item/blaster` directory of your addon. The name of the model should be the same as the ID used when registering your blaster. Textures for each model should share the same filename in the directory `assets/<modid>/textures/item/model/blaster` (unless specified otherwise, see the attachment section of the [Blaster Descriptor API](blaster-descriptor.md) page for more details).
 
 ### Format
 
