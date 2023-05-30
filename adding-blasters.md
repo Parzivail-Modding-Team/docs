@@ -36,9 +36,6 @@ public class MyAddon implements PswgAddon
                         .bolt(ColorUtil.packHsv(0.1667f, 1, 1), 1, 1)
                         // It can fire a new bolt every 7 ticks in fully automatic mode
                         .autoParameters(7)
-                        // In burst fire, it can fire every two ticks up to three times, then it must
-                        // wait for (gap = 2) * (burstRepeatTime = 2) = 4 ticks before firing another
-                        .burstParameters(2, 3, 2)
                         // Firing accumulates up to 1.5 degrees of horizontal and 3 vertical recoil
                         .recoil(new BlasterAxialInfo(1.5f, 3))
                         // Each bolt has a maximum deviation of half a degree from straight
