@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7aa5f21e965275df",
+        "id": "0194efc7af6c6168",
         "type": "tabs",
         "children": [
           {
-            "id": "58ad631d101c05a5",
+            "id": "fda0705ece6cd209",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "eb8cdcf44d093ee3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -64,6 +77,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "1acbd0b6f5b26763",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -85,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content-api.md",
+                "file": "setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content-api.md",
+                "file": "setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content-api.md"
+                "file": "setup.md"
               }
             }
           }
@@ -146,8 +167,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "58ad631d101c05a5",
+  "active": "eb8cdcf44d093ee3",
   "lastOpenFiles": [
-    "content-api.md"
+    "content-api.md",
+    "setup.md",
+    "image 1.png",
+    "image.png",
+    "Pasted image 20230419182643.png",
+    "Pasted image 20230419182803.png",
+    "Pasted image 20230419182142.png",
+    "Pasted image 20230419181820.png",
+    "Pasted image 20230419180708.png",
+    "Pasted image 20230419180158.png",
+    "Pasted image 20230419180032.png",
+    "Pasted image 20230419175250.png",
+    "assignment2p2 - Copy.md",
+    "assignment2p1 - Copy.md",
+    "assignment2p1.md",
+    "assignment2p2.md",
+    "PA1 Report.md"
   ]
 }
