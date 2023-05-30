@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "setup.md",
+                "file": "adding-blasters.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "setup.md",
+                "file": "adding-blasters.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "setup.md",
+                "file": "adding-blasters.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "setup.md"
+                "file": "adding-blasters.md"
               }
             }
           }
@@ -156,10 +156,10 @@
   },
   "active": "fda0705ece6cd209",
   "lastOpenFiles": [
-    "content-api.md",
     "blaster-descriptor.md",
-    "adding-blasters.md",
+    "content-api.md",
     "setup.md",
+    "adding-blasters.md",
     "image 1.png",
     "image.png",
     "Pasted image 20230419182643.png",
