@@ -119,8 +119,8 @@ PswgContent.registerBlasterPreset(
 
 ## Modifying other blaster assets
 
-Event: `PswgContent.BLASTER_REGISTERED`
-Registration Phase: `PswgAddon::onPswgStarting`
-Firing Phase: `PswgAddon::onPswgReady`
+* Event: `PswgContent.BLASTER_REGISTERED`
+* Registration Phase: `PswgAddon::onPswgStarting`
+* Firing Phase: `PswgAddon::onPswgReady`
 
 TODO
