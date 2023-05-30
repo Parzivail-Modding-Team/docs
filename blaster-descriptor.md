@@ -320,6 +320,10 @@ Parameter | Description
 
 # Blaster Attachment Builders
 
+The `BlasterAttachmentBuilder` allows a set of possible attachments to be defined and placed on a series of groups, each group allowing one attachment to be attached at a time. Some groups can optionally require one of the allowed attachments to be in place at _all_ times (for example, a variation of weapon stock), while others may allow no attachments (e.g. a set o scopes).
+
+For more information about how blaster attachments are stored and manipulated internally (including how they're stored in itemstacks), see the [blaster attachment bitmap](blaster-attachment-bitmaps.md) page.
+
 ## Method: `attachment`
 
 Adds an attachment option without a visual component.
