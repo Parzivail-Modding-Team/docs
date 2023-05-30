@@ -9,8 +9,6 @@
 1. PSWG is not yet on Maven Central, so you must depend on the jarfile published each alpha as a GitHub release. This is accomplished with the following changes to your `build.gradle`.
 
 ```diff
-diff --git a/build.gradle b/build.gradle
-index 7a3be5d..87cdab6 100644
 --- a/build.gradle
 +++ b/build.gradle
 @@ -16,6 +16,18 @@ repositories {
@@ -45,8 +43,6 @@ index 7a3be5d..87cdab6 100644
 2. Then, specify the minimum version of PSWG you wish to depend on in your `gradle.properties`.
 
 ```diff
-diff --git a/gradle.properties b/gradle.properties
-index d9f5bbe..9bb5f59 100644
 --- a/gradle.properties
 +++ b/gradle.properties
 @@ -15,3 +15,4 @@ org.gradle.parallel=true
@@ -57,7 +53,30 @@ index d9f5bbe..9bb5f59 100644
 
 ```
 
-3. Reload your Gradle project. You're now ready to add new content!
+3. Then, add the dependency on PSWG in your Fabric Mod JSON file.
+
+```diff
+--- a/src/main/resources/fabric.mod.json
++++ b/src/main/resources/fabric.mod.json
+@@ -30,6 +30,7 @@
+     "fabricloader": ">=0.14.19",
+     "fabric-api": "*",
+     "minecraft": "~1.20.0",
++    "pswg": ">=0.0.108",
+     "java": ">=17"
+   },
+   "suggests": {
+
+```
+
+<details>
+<summary>Q&A: Why can't I use the value from the Gradle properties file?</summary>
+
+At runtime, if you're not building and running with Gradle (Building and running with IntelliJ is recommended), these values in the Fabric Mod JSON are not populated with the values present in `gradle.properties`, and the version at runtime would be the literal string `${pswg_version}` instead of interpolating with the correct value, e.g. `0.0.108+1.20.0`. Hopefully future developments will prevent this redundancy, but unfortunately, specifying the version number in both locations is best practice for now.
+
+</details>
+
+4. Finally, reload your Gradle project. You're now ready to add new content!
 
 ## Next Steps
 
