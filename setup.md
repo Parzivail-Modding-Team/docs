@@ -80,7 +80,7 @@ At runtime, if you're not building and running with Gradle (building and running
 
 ## Next Steps
 
-* [Adding a new blaster](adding-blasters)
+* [Adding a new blaster](adding-blasters.md)
 * Coming soon: Adding a new lightsaber
 * Coming soon: Adding a new species
 * Coming soon: Adding a new set of armor

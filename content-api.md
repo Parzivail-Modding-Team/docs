@@ -15,7 +15,7 @@ This API allows addons to register new blasters, as well as modify existing ones
 
 This method takes one or more `BlasterDescriptor` instances which describe all of the properties of a blaster to be registered.
 
-For a detailed explanation of the methods available in the builder, see the [BlasterDescriptor API](blaster-descriptor).
+For a detailed explanation of the methods available in the builder, see the [BlasterDescriptor API](blaster-descriptor.md).
 
 Registering a blaster will fire an event that allows other addons to modify the registered blaster, if required. See below for details about the blaster registration event.
 
