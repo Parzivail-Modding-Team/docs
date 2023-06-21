@@ -12,28 +12,32 @@
 --- a/build.gradle
 +++ b/build.gradle
 @@ -16,6 +16,18 @@ repositories {
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
-+    ivy {
-+        patternLayout {
-+            artifact "releases/download/[revision]/[artifact]-[revision](-[classifier])(.[ext])"
-+        }
-+        metadataSources {
-+            artifact()
-+        }
-+        content {
-+            includeGroup "com.parzivail"
-+        }
-+        url = "https://github.com/Parzivail-Modding-Team/GalaxiesParzisStarWarsMod"
+     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+     // for more information about repositories.
++
++    // For PSWG dependencies.
++    maven {
++        name = "Ladysnake Mods"
++        url = "https://ladysnake.jfrog.io/artifactory/mods"
++    }
++
++    maven {
++        name = "TerraformersMC"
++        url = "https://maven.terraformersmc.com/releases"
++    }
++
++    maven {
++        name = "Shedaniel Maven"
++        url = "https://maven.shedaniel.me"
 +    }
  }
  
  dependencies {
 @@ -31,6 +43,7 @@ dependencies {
-        // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
+     // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
  
-        // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+     // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 +    modImplementation "com.parzivail:pswg:${project.pswg_version}"
  }
  
@@ -49,7 +53,7 @@
 
  # Dependencies
         fabric_version=0.82.0+1.20.0
-+       pswg_version=0.0.108+1.20.0
++       pswg_version=0.0.108+1.20.1
 
 ```
 
@@ -72,7 +76,7 @@
 <details>
 <summary>Q&A: Why can't I use the value from the Gradle properties file?</summary>
 
-At runtime, if you're not building and running with Gradle (building and running with IntelliJ is recommended), these values in the Fabric Mod JSON are not populated with the values present in `gradle.properties`, and the version at runtime would be the literal string `${pswg_version}` instead of interpolating with the correct value, e.g. `0.0.108+1.20.0`. Hopefully future developments will prevent this redundancy, but unfortunately, specifying the version number in both locations is best practice for now.
+At runtime, if you're not building and running with Gradle (building and running with IntelliJ is recommended), these values in the Fabric Mod JSON are not populated with the values present in `gradle.properties`, and the version at runtime would be the literal string `${pswg_version}` instead of interpolating with the correct value, e.g. `0.0.108+1.20.1`. Hopefully future developments will prevent this redundancy, but unfortunately, specifying the version number in both locations is best practice for now.
 
 </details>
 
